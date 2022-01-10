@@ -7,6 +7,9 @@ using Uni.DataLayer.Entities.Common;
 
 namespace Uni.DataLayer.Entities.en
 {
+    /// <summary>
+    /// آموزش
+    /// </summary>
     public class Education:BaseEntity
     {
         #region Education

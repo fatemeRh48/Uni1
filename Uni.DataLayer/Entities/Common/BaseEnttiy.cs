@@ -1,17 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Uni.DataLayer.Entities.Common
+﻿namespace Uni.DataLayer.Entities.Common
 {
     public abstract class BaseEntity
     {
-        public int Id { get; set; }
+        /// <summary>
+        /// شناسه
+        /// </summary>
+        public long Id { get; set; }
+        /// <summary>
+        /// تاریخ ایجاد
+        /// </summary>
         public DateTime CreateData { get; set; }
+        /// <summary>
+        /// آخرین بروزرسانی
+        /// </summary>
         public DateTime LastUpdateTime { get; set; }
+        /// <summary>
+        /// حذف شده / نشده
+        /// </summary>
         public bool IsDeleted { get; set; }
     }
 }
