@@ -4,16 +4,16 @@ using Uni.DataLayer.Enums;
 namespace Uni.DataLayer.Entities
 {
     /// <summary>
-    /// تحصیلات استاد
+    /// تحصیلات مدرس
     /// </summary>
     public class Education : BaseEntity
     {
         #region Properties
 
         /// <summary>
-        /// شناسه استاد
+        /// شناسه مدرس
         /// </summary>
-        public long ProfesserId { get; set; }
+        public long TeacherId { get; set; }
         /// <summary>
         /// مقطع
         /// </summary>
@@ -21,11 +21,11 @@ namespace Uni.DataLayer.Entities
         /// <summary>
         /// محل اخذ مدرک
         /// </summary>
-        public string PlaceOfGraduation { get; set; }
+        public string? PlaceOfGraduation { get; set; }
         /// <summary>
         /// سال فارغ التحصیلی
         /// </summary>
-        public string GraduationYear { get; set; }
+        public string? GraduationYear { get; set; }
         /// <summary>
         /// رشته تحصیلی
         /// </summary>
@@ -36,9 +36,9 @@ namespace Uni.DataLayer.Entities
         #region Relations
 
         /// <summary>
-        /// استاد
+        /// مدرس
         /// </summary>
-        public virtual Professor Professor { get; set; }
+        public virtual Teacher Teacher { get; set; }
 
         #endregion
     }

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Uni.DataLayer.Configuration;
-using Uni.DataLayer.Entities.en;
-using Uni.DataLayer.Entities.syllabus;
+using Uni.DataLayer.Entities;
 
 namespace Uni.DataLayer
 {
@@ -13,18 +12,25 @@ namespace Uni.DataLayer
         }
 
         public DbSet<User> User { get; set; }
-        public DbSet<Formerly> formerly { get; set; }
+        public DbSet<UserToken> UserTokens { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Education> Education { get; set; }
-        public DbSet<Syllabus> syllabus { get; set; }
-        public DbSet<Courses> Courses { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<CoursePlan> CoursePlans { get; set; }
+        public DbSet<Achievement> Achievements { get; set; }
+        public DbSet<CoursePlanAchievement> CoursePlanAchievements { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new FormerlyConfiguration());
+            modelBuilder.ApplyConfiguration(new UserTokenConfiguration());
+            modelBuilder.ApplyConfiguration(new TeacherConfiguration());
             modelBuilder.ApplyConfiguration(new EducationConfiguration());
-            modelBuilder.ApplyConfiguration(new SyllabusConfiguration());
-            modelBuilder.ApplyConfiguration(new CoursesConfiguration());
+            modelBuilder.ApplyConfiguration(new CourseConfiguration());
+            modelBuilder.ApplyConfiguration(new CoursePlanConfiguration());
+            modelBuilder.ApplyConfiguration(new AchievementConfiguration());
+            modelBuilder.ApplyConfiguration(new CoursePlanAchievementConfiguration());
+
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(s => s.GetForeignKeys()))
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;

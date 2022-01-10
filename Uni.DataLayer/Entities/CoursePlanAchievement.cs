@@ -4,22 +4,22 @@ using Uni.DataLayer.Enums;
 namespace Uni.DataLayer.Entities
 {
     /// <summary>
-    /// ارتباط درس با دستاورد های برنامه
+    /// ارتباط طرح درس با دستاورد های برنامه
     /// </summary>
-    public class CourseAchievement : BaseEntity
+    public class CoursePlanAchievement : BaseEntity
     {
         #region Properties
 
         /// <summary>
-        /// شناسه درس
+        /// شناسه طرح درس
         /// </summary>
-        public long CourseId { get; set; }
+        public long CoursePlanId { get; set; }
         /// <summary>
-        /// شناسه دستاورد
+        /// شناسه دستاورد برنامه
         /// </summary>
         public long AchievementId { get; set; }
         /// <summary>
-        /// مقدار دستاورد
+        /// میزان دستاورد
         /// </summary>
         public AchievementValue Value { get; set; }
 
@@ -28,9 +28,9 @@ namespace Uni.DataLayer.Entities
         #region Relations
 
         /// <summary>
-        /// واحد درسی
+        /// طرح درس
         /// </summary>
-        public virtual Course Course { get; set; }
+        public virtual CoursePlan CoursePlan { get; set; }
         /// <summary>
         /// دستاورد
         /// </summary>

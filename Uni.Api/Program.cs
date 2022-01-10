@@ -9,6 +9,7 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
     options.UseNpgsql(connectionString);
+    //options.UseSqlServer(connectionString);
 });
 
 builder.Services.AddControllers();

@@ -13,9 +13,9 @@ namespace Uni.DataLayer.Entities
         public string Title { get; set; }
 
         /// <summary>
-        /// رابط دستاورد های برنامه
+        /// رابط دستاورد های برنامه و طرح درس
         /// </summary>
-        public virtual ICollection<CourseAchievement> CourseAchievements { get; set; }
+        public virtual ICollection<CoursePlanAchievement> CoursePlanAchievements { get; set; }
 
     }
 }

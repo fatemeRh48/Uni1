@@ -9,7 +9,7 @@
         /// <summary>
         /// تاریخ ایجاد
         /// </summary>
-        public DateTime CreateData { get; set; }
+        public DateTime CreateDate { get; set; }
         /// <summary>
         /// آخرین بروزرسانی
         /// </summary>

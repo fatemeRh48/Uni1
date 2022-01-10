@@ -2,6 +2,9 @@
 
 namespace Uni.DataLayer.Enums
 {
+    /// <summary>
+    /// میزان دستاورد برنامه
+    /// </summary>
     public enum AchievementValue
     {
         [Description("کم")]
