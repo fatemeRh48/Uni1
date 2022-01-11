@@ -8,8 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-    options.UseNpgsql(connectionString);
-    //options.UseSqlServer(connectionString);
+    //options.UseNpgsql(connectionString);
+    options.UseSqlServer(connectionString);
 });
 
 builder.Services.AddControllers();

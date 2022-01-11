@@ -22,50 +22,6 @@ namespace Uni.DataLayer.Entities
         /// مرتبه دانشگاهی
         /// </summary>
         public AcademicRank AcademicRank { get; set; }
-        /// <summary>
-        /// آدرس صفحه اینترنتی
-        /// </summary>
-        public string? WebSiteUrl { get; set; }
-        /// <summary>
-        /// زمینه تحقیقاتی
-        /// </summary>
-        public string? ResearchField { get; set; }
-        /// <summary>
-        /// تجربه کاری - رزومه
-        /// </summary>
-        public string? Resume { get; set; }
-        /// <summary>
-        /// کتاب ها
-        /// </summary>
-        public string? Books { get; set; }
-        /// <summary>
-        /// مقالات
-        /// </summary>
-        public string? Articles { get; set; }
-        /// <summary>
-        /// پروژه ها
-        /// </summary>
-        public string? Projects { get; set; }
-        /// <summary>
-        /// فعالیت ها
-        /// </summary>
-        public string? Activities { get; set; }
-        /// <summary>
-        /// اختراعات
-        /// </summary>
-        public string? Inventions { get; set; }
-        /// <summary>
-        /// افتخارات
-        /// </summary>
-        public string? Honors { get; set; }
-        /// <summary>
-        /// عضویت در جوامع
-        /// </summary>
-        public string? MembershipInCommunities { get; set; }        
-        /// <summary>
-        /// سایر توضیحات
-        /// </summary>
-        public string? OtherDescription { get; set; }
 
         #endregion
 
@@ -79,6 +35,10 @@ namespace Uni.DataLayer.Entities
         /// طرح های درس
         /// </summary>
         public virtual ICollection<CoursePlan> CoursePlans { get; set; }
+        /// <summary>
+        /// گزینه های مدرس
+        /// </summary>
+        public virtual ICollection<TeacherOption> TeacherOptions { get; set; }
 
         #endregion
     }

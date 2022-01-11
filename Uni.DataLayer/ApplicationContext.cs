@@ -11,12 +11,14 @@ namespace Uni.DataLayer
                
         }
 
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<UserToken> UserTokens { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
-        public DbSet<Education> Education { get; set; }
+        public DbSet<TeacherOption> TeacherOptions { get; set; }
+        public DbSet<Education> Educations { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<CoursePlan> CoursePlans { get; set; }
+        public DbSet<CoursePlanOption> CoursePlanOptions { get; set; }
         public DbSet<Achievement> Achievements { get; set; }
         public DbSet<CoursePlanAchievement> CoursePlanAchievements { get; set; }
 
@@ -25,9 +27,11 @@ namespace Uni.DataLayer
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserTokenConfiguration());
             modelBuilder.ApplyConfiguration(new TeacherConfiguration());
+            modelBuilder.ApplyConfiguration(new TeacherOptionConfiguration());
             modelBuilder.ApplyConfiguration(new EducationConfiguration());
             modelBuilder.ApplyConfiguration(new CourseConfiguration());
             modelBuilder.ApplyConfiguration(new CoursePlanConfiguration());
+            modelBuilder.ApplyConfiguration(new CoursePlanOptionConfiguration());
             modelBuilder.ApplyConfiguration(new AchievementConfiguration());
             modelBuilder.ApplyConfiguration(new CoursePlanAchievementConfiguration());
 

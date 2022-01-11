@@ -22,38 +22,6 @@ namespace Uni.DataLayer.Configuration
             builder?.Property(x => x.TeacherId)
                .IsRequired();
 
-            builder?.Property(x => x.ReferenceBooks)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
-            builder?.Property(x => x.Goals)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
-            builder?.Property(x => x.Results)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
-            builder?.Property(x => x.Headings)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
-            builder?.Property(x => x.EducationalFacilities)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
-            builder?.Property(x => x.Homeworks)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
-            builder?.Property(x => x.Projects)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
-            builder?.Property(x => x.OtherSources)
-               .IsRequired(false)
-               .HasMaxLength(1200);
-
             #endregion
 
             #region Relations
@@ -69,6 +37,10 @@ namespace Uni.DataLayer.Configuration
             builder?.HasMany(x => x.CoursePlanAchievements)
                .WithOne(x => x.CoursePlan)
                .HasForeignKey(x => x.CoursePlanId);
+
+            builder?.HasMany(x => x.CoursePlanOptions)
+                .WithOne(x => x.CoursePlan)
+                .HasForeignKey(x => x.CoursePlanId);
 
             #endregion
         }

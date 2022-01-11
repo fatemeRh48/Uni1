@@ -17,5 +17,6 @@ namespace Uni.DataLayer.Entities
         /// </summary>
         public virtual ICollection<CoursePlanAchievement> CoursePlanAchievements { get; set; }
 
+
     }
 }

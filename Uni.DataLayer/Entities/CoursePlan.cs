@@ -21,38 +21,6 @@ namespace Uni.DataLayer.Entities
         /// شناسه مدرس
         /// </summary>
         public long TeacherId{ get; set; }
-        /// <summary>
-        /// کتاب های مرجع
-        /// </summary>
-        public string? ReferenceBooks { get; set; }
-        /// <summary>
-        /// اهداف
-        /// </summary>
-        public string? Goals { get; set; }
-        /// <summary>
-        /// نتایج
-        /// </summary>
-        public string? Results { get; set; }
-        /// <summary>
-        /// سرفصل ها
-        /// </summary>
-        public string? Headings { get; set; }
-        /// <summary>
-        /// امکانات آموزشی
-        /// </summary>
-        public string? EducationalFacilities { get; set; }
-        /// <summary>
-        /// تکالیف
-        /// </summary>
-        public string? Homeworks { get; set; }
-        /// <summary>
-        /// پروژه ها
-        /// </summary>
-        public string? Projects { get; set; }
-        /// <summary>
-        /// سایر منابع 
-        /// </summary>
-        public string? OtherSources { get; set; }
 
         #endregion
 
@@ -70,6 +38,10 @@ namespace Uni.DataLayer.Entities
         /// رابط دستاورد های برنامه
         /// </summary>
         public virtual ICollection<CoursePlanAchievement> CoursePlanAchievements { get; set; }
+        /// <summary>
+        /// گزینه های طرح درس
+        /// </summary>
+        public virtual ICollection<CoursePlanOption> CoursePlanOptions { get; set; }
 
         #endregion
     }
